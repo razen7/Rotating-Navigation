@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: grey;
+}
+
+.container {
+    background-color: white;
+    transform-origin: top left;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 60px;
+    transition: transform 0.5s linear;
+}
+
+.container.show-nav {
+    transform: rotate(-20deg);
+}
+
+.circle-container {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    background-color: rgb(244, 85, 85);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px red;
+    position: relative;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-75deg);
+}
+
+.circle button {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: 30px;
+}
+
+.circle button#open {
+    position: absolute;
+    bottom: 20%;
+    right: 20%;
+}
+
+.circle button#close {
+    position: absolute;
+    bottom: 20%;
+    left: 20%;
+}
+
+.content h1{
+    margin-bottom: 3px;
+}
+.content small {
+    font-style: italic;
+    font-size: 15px;
+    color: gray;
+}
+
+.content p{
+    font-size: 20px;
+    line-height: 1.4;
+}
+.content img {
+    max-width: 100%;
+    max-height: 300px;
+}
+nav {
+    position: fixed;
+    bottom: 40px;
+    z-index: -1;
+}
+
+nav li {
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+nav li:nth-child(2) {
+    margin-left: 20px;
+}
+
+nav li:nth-child(3) {
+    margin-left: 40px;
+}
+
+nav li i {
+    margin-right: 10px;
+}
